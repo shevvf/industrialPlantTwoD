@@ -6,54 +6,54 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 {
     public class SwitchableMainModel
     {
-        private ReactiveProperty<BigInteger> currentMoney;
-        private ReactiveProperty<BigInteger> incomePerTap;
-        private ReactiveProperty<BigInteger> icomePerSecond;
-        private ReactiveProperty<int> currentEnergy;
-        private ReactiveProperty<int> maxEnergy;
+        private ReactiveProperty<BigInteger> currentCoins;
+        private ReactiveProperty<BigInteger> currentCubes;
+        private ReactiveProperty<BigInteger> cubesPerSecond;
+        private ReactiveProperty<BigInteger> currentDiamonds;
+        private ReactiveProperty<BigInteger> currentSpecialCoins;
 
-        public ReactiveProperty<BigInteger> CurrentMoney
+        public ReactiveProperty<BigInteger> CurrentCoins
         {
             get
             {
-                currentMoney ??= new(0);
-                return currentMoney;
+                currentCoins ??= new(10);
+                return currentCoins;
             }
         }
 
-        public ReactiveProperty<BigInteger> IncomePerTap
+        public ReactiveProperty<BigInteger> CurrentCubes
         {
             get
             {
-                incomePerTap ??= new(1);
-                return incomePerTap;
+                currentCubes ??= new(10);
+                return currentCubes;
             }
         }
 
-        public ReactiveProperty<BigInteger> IncomePerSecond
+        public ReactiveProperty<BigInteger> CubesPerSecond
         {
             get
             {
-                icomePerSecond ??= new(1);
-                return icomePerSecond;
+                cubesPerSecond ??= new(10);
+                return cubesPerSecond;
             }
         }
 
-        public ReactiveProperty<int> CurrentEnergy
+        public ReactiveProperty<BigInteger> CurrentDiamonds
         {
             get
             {
-                currentEnergy ??= new(10);
-                return currentEnergy;
+                currentDiamonds ??= new(10);
+                return currentDiamonds;
             }
         }
 
-        public ReactiveProperty<int> MaxEnergy
+        public ReactiveProperty<BigInteger> CurrentSpecialCoins
         {
             get
             {
-                maxEnergy ??= new(10);
-                return maxEnergy;
+                currentSpecialCoins ??= new(10);
+                return currentSpecialCoins;
             }
         }
 

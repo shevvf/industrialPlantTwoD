@@ -28,8 +28,6 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 
         void IStartable.Start()
         {
-            switchableMainViewModel.StartAutoMining();
-
             ButtonsSubscribe();
             TextsSubscribe();
         }
