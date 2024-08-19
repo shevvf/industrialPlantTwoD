@@ -1,3 +1,5 @@
+using AnimalSimulation.Data.Json;
+
 using IndustrialPlant.App.StateMachine;
 using IndustrialPlant.Data.StaticData.Configs;
 using IndustrialPlant.Data.UserData;
@@ -21,6 +23,8 @@ namespace IndustrialPlant.LifetimeScopes
         [field: SerializeField] public SwitchablePanelsConfig SwitchablePanelsConfig { get; private set; }
         [field: SerializeField] public MainHUDConfig MainHUDConfig { get; private set; }
         [field: SerializeField] public PopUpPanelsConfig PopUpPanelsConfig { get; private set; }
+        [field: SerializeField] public TransitionalPanelsConfig TransitionalPanelsConfig { get; private set; }
+        [field: SerializeField] public AppJsonData AppJsonData { get; private set; }
         [field: SerializeField] public UserData UserData { get; private set; }
 
         private IContainerBuilder containerBuilder;
@@ -79,6 +83,9 @@ namespace IndustrialPlant.LifetimeScopes
             containerBuilder.RegisterInstance(SwitchablePanelsConfig);
             containerBuilder.RegisterInstance(MainHUDConfig);
             containerBuilder.RegisterInstance(PopUpPanelsConfig);
+            containerBuilder.RegisterInstance(TransitionalPanelsConfig);
+            containerBuilder.RegisterInstance(AppJsonData);
+
             containerBuilder.RegisterInstance(UserData);
         }
     }

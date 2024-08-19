@@ -6,6 +6,8 @@ using IndustrialPlant.UI.MVVM.MainHUD;
 using IndustrialPlant.UI.MVVM.MainHUD.MainHUD;
 using IndustrialPlant.UI.MVVM.PopUp.OfflineReward;
 using IndustrialPlant.UI.MVVM.Switchable.Main;
+using IndustrialPlant.UI.MVVM.Transitional;
+using IndustrialPlant.UI.MVVM.Transitional.FactoryBuy;
 
 using UnityEngine;
 
@@ -50,11 +52,17 @@ namespace IndustrialPlant.LifetimeScopes.MVVM.UI.Main
             containerBuilder.Register<MainHUDController>(Lifetime.Singleton).AsSelf();
             containerBuilder.Register<SwitchableController>(Lifetime.Singleton).AsSelf();
             containerBuilder.Register<PopUpController>(Lifetime.Singleton).AsSelf();
+            containerBuilder.Register<TransitionalController>(Lifetime.Singleton).AsSelf();
         }
 
         private void RegisterModels()
         {
+            containerBuilder.Register<MainHUDModel>(Lifetime.Singleton).AsSelf();
+
             containerBuilder.Register<SwitchableMainModel>(Lifetime.Singleton).AsSelf();
+
+            containerBuilder.Register<FactoryBuyModel>(Lifetime.Singleton).AsSelf();
+
             containerBuilder.Register<OfflineRewardModel>(Lifetime.Singleton).AsSelf();
         }
 

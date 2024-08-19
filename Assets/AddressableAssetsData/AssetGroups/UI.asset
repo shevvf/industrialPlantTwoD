@@ -73,6 +73,16 @@ MonoBehaviour:
     - UI
     - PopUp
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c26984729a759024fb8212764a775188
+    m_Address: FactoryBuy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f338b7966a41a4a45a9284321c68288c
+    m_Address: FactoryUpgrade
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 003f2b2edf8443645869c73fe5a45160, type: 2}
   m_SchemaSet:
