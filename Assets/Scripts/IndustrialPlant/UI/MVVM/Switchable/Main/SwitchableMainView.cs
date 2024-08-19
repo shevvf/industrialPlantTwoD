@@ -77,7 +77,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 
         private void UpdateFactoryText(int factoryIndex, int factoryLevel)
         {
-            var factoryText = Scope.View.IndustrialFactories[factoryIndex].FactoryLevelText;
+            TMP_Text factoryText = Scope.View.IndustrialFactories[factoryIndex].FactoryLevelText;
 
             if (factoryLevel <= 0)
             {

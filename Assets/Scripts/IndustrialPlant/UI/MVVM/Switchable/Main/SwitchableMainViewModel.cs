@@ -20,7 +20,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 
         public async void OnFactoryClick(int factoryId)
         {
-            switchableMainModel.CurrentFactoryId.Value = factoryId;
+            switchableMainModel.CurrentFactoryId.OnNext(factoryId);
 
             if (FactoriesLevel[factoryId] <= 0)
             {

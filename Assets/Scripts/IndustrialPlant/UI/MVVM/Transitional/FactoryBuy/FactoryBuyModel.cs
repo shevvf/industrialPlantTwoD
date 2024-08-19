@@ -1,3 +1,4 @@
+using IndustrialPlant.Data.StaticData;
 using IndustrialPlant.Data.UserData;
 using IndustrialPlant.UI.MVVM.Switchable.Main;
 
@@ -12,28 +13,19 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         private readonly UserData userData;
         private readonly SwitchableMainModel switchableMainModel;
 
-        private ReactiveProperty<int> currentFactoryId = new();
-        private ReactiveProperty<int> currentFactoryPrice;
-        private ReactiveProperty<int> currentFactoryMiningRate;
-        private ReactiveProperty<int> currentFactoryReward;
-        private ReactiveProperty<int> currentFactoryRequiredTimeSec;
-        private ReactiveProperty<string> currentFactoryName;
+        private int currentFactoryId;
 
-        public ReactiveProperty<int> CurrentFactoryId
-        {
-            get
-            {
-                currentFactoryId ??= new(switchableMainModel.CurrentFactoryId.Value);
-                return currentFactoryId;
-            }
-        }
+        private ReactiveProperty<int> ñurrentFactoryPrice = new();
+        private ReactiveProperty<int> ñurrentFactoryMiningRate = new();
+        private ReactiveProperty<int> ñurrentFactoryReward = new();
+        private ReactiveProperty<int> ñurrentFactoryRequiredTimeSec = new();
+        private ReactiveProperty<string> ñurrentFactoryName = new();
 
         public ReactiveProperty<int> CurrentFactoryPrice
         {
             get
             {
-                currentFactoryPrice ??= new(userData.GameUserData.factoryStats[currentFactoryId.Value].basePrice);
-                return currentFactoryPrice;
+                return ñurrentFactoryPrice;
             }
         }
 
@@ -41,8 +33,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             get
             {
-                currentFactoryMiningRate ??= new(userData.GameUserData.factoryStats[currentFactoryId.Value].baseMiningRate);
-                return currentFactoryMiningRate;
+                return ñurrentFactoryMiningRate;
             }
         }
 
@@ -50,8 +41,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             get
             {
-                currentFactoryReward ??= new(userData.GameUserData.factoryStats[currentFactoryId.Value].reward);
-                return currentFactoryReward;
+                return ñurrentFactoryReward;
             }
         }
 
@@ -59,8 +49,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             get
             {
-                currentFactoryRequiredTimeSec ??= new(userData.GameUserData.factoryStats[currentFactoryId.Value].baseRequiredTimeSec);
-                return currentFactoryRequiredTimeSec;
+                return ñurrentFactoryRequiredTimeSec;
             }
         }
 
@@ -68,8 +57,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             get
             {
-                currentFactoryName ??= new(userData.GameUserData.factoryStats[currentFactoryId.Value].name);
-                return currentFactoryName;
+                return ñurrentFactoryName;
             }
         }
 
@@ -77,7 +65,30 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             this.userData = userData;
             this.switchableMainModel = switchableMainModel;
-            Debug.Log("FactoryBuyModel");
+
+            SubscribeFactoryId();
+        }
+
+        private void SubscribeFactoryId()
+        {
+            switchableMainModel.CurrentFactoryId.Subscribe(id =>
+            {
+                Debug.Log($"Current Factory ID: {id}");
+                currentFactoryId = id;
+                SetFactoryData();
+            });
+        }
+
+        private void SetFactoryData()
+        {
+            int factoryId = currentFactoryId;
+
+            FactoryStats factoryStats = userData.GameUserData.factoryStats[factoryId];
+            ñurrentFactoryPrice.OnNext(factoryStats.basePrice);
+            ñurrentFactoryMiningRate.OnNext(factoryStats.baseMiningRate);
+            ñurrentFactoryReward.OnNext(factoryStats.reward);
+            ñurrentFactoryRequiredTimeSec.OnNext(factoryStats.baseRequiredTimeSec);
+            ñurrentFactoryName.OnNext(factoryStats.name);
         }
     }
 }

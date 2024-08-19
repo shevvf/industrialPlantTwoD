@@ -63,11 +63,21 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             factoryBuyViewModel.CurrentFactoryMiningRate.SubscribeToTMPText(Scope.View.MiningRateText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryPrice.SubscribeToTMPText(Scope.View.PriceText).AddTo(Scope);
-            factoryBuyViewModel.CurrentFactoryRequiredTimeSec.SubscribeToTMPText(Scope.View.RequiredTimeText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryReward.SubscribeToTMPText(Scope.View.RewardText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryName.SubscribeToTMPText(Scope.View.NameText).AddTo(Scope);
+            factoryBuyViewModel.CurrentFactoryRequiredTimeSec
+               .Select(seconds => FormatTime(seconds))
+               .Subscribe(formattedTime =>
+               {
+                   Scope.View.RequiredTimeText.SetText(formattedTime);
+               })
+               .AddTo(Scope);
+        }
 
-            //  Debug.Log(factoryBuyViewModel.CurrentFactoryId.Value);
+        private string FormatTime(int totalSeconds)
+        {
+            TimeSpan timeSpan = TimeSpan.FromSeconds(totalSeconds);
+            return timeSpan.ToString(@"hh\:mm\:ss");
         }
     }
 }

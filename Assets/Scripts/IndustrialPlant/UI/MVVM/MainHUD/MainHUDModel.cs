@@ -1,11 +1,15 @@
 using System.Numerics;
 
+using IndustrialPlant.Data.UserData;
+
 using R3;
 
 namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
 {
     public class MainHUDModel
     {
+        private readonly UserData userData;
+
         private ReactiveProperty<BigInteger> currentCoins;
         private ReactiveProperty<BigInteger> currentCubes;
         private ReactiveProperty<BigInteger> cubesPerSecond;
@@ -57,9 +61,9 @@ namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
             }
         }
 
-        public MainHUDModel()
+        public MainHUDModel(UserData userData)
         {
-
+            this.userData = userData;
         }
     }
 }
