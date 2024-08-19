@@ -15,9 +15,6 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
         private ObservableDictionary<int, int> factoriesLevel;
         private ReactiveProperty<int> currentFactoryId;
 
-        // private readonly Subject<int> onCurrentFactoryId = new();
-        // public Observable<int> OnCurrentFactoryId => onCurrentFactoryId;
-
         public ObservableDictionary<int, int> FactoriesLevel
         {
             get
@@ -37,7 +34,6 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
             get
             {
                 currentFactoryId ??= new();
-                // onCurrentFactoryId.OnNext(currentFactoryId.Value);
                 return currentFactoryId;
             }
         }
