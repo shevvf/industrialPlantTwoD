@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 
-using IndustrialPlant.Infrastructure.Factories.ViewFactory;
-using IndustrialPlant.Data.StaticData.Configs;
-using IndustrialPlant.UI.MVVM.Base.Views;
-
 using Cysharp.Threading.Tasks;
+
+using IndustrialPlant.Data.StaticData.Configs;
+using IndustrialPlant.Infrastructure.Factories.ViewFactory;
+using IndustrialPlant.UI.MVVM.Base.Views;
 
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -18,7 +18,6 @@ namespace IndustrialPlant.UI.MVVM.Base.Controller
         private readonly IViewFactory viewFactory;
 
         private readonly List<IView> instantiatedViews = new();
-        private IView currentView;
 
         public ViewController(PanelsConfig panelsConfig, Transform targetParent, IViewFactory viewFactory)
         {
@@ -37,12 +36,8 @@ namespace IndustrialPlant.UI.MVVM.Base.Controller
             view.CloseView();
         }
 
-        public virtual async UniTask OpenViewAsync<TView>() where TView : Component, IView
+        public virtual async UniTask<IView> OpenViewAsync<TView>() where TView : Component, IView
         {
-            if (currentView != null && currentView.GetType() == typeof(TView))
-                return;
-
-
             IView view = instantiatedViews.Find(v => v is TView);
             if (view == null)
             {
@@ -51,9 +46,7 @@ namespace IndustrialPlant.UI.MVVM.Base.Controller
                 instantiatedViews.Add(view);
             }
             view.OpenView();
-
-            currentView?.CloseView();
-            currentView = view;
+            return view;
         }
 
         public virtual async UniTask SwitchViewAsync<TView>() where TView : Component, IView

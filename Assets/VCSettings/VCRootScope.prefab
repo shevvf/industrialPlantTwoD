@@ -51,7 +51,21 @@ MonoBehaviour:
   <SwitchablePanelsConfig>k__BackingField: {fileID: 11400000, guid: a09bad39cbe615c45bdb45e20f27b5a7, type: 2}
   <MainHUDConfig>k__BackingField: {fileID: 11400000, guid: c9bc608b21e4b5446850934615ba1bf1, type: 2}
   <PopUpPanelsConfig>k__BackingField: {fileID: 11400000, guid: 3c2b7c7d729d3fa4ba774e6decc8664a, type: 2}
+  <TransitionalPanelsConfig>k__BackingField: {fileID: 11400000, guid: 18488ba7ef804f24e8f437121f295dd8, type: 2}
+  <AppJsonData>k__BackingField:
+    <Path>k__BackingField: Json
+    <Jsons>k__BackingField:
+    - {fileID: 4900000, guid: a83000aac235aaf42a4ae382da93bb06, type: 3}
   <UserData>k__BackingField:
     <GameUserData>k__BackingField:
       quitTime: 
       nextDailyReward: 
+      factoryStats:
+      - id: 0
+        name: 
+        currentLevel: 0
+        maxLevel: 0
+        basePrice: 0
+        baseMiningRate: 0
+        reward: 0
+        baseRequiredTimeSec: 0

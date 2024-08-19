@@ -1,7 +1,14 @@
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
+using AnimalSimulation.Data.Json;
+using AnimalSimulation.Data.Path;
+
+using IndustrialPlant.Data.StaticData;
 using IndustrialPlant.Data.UserData;
 using IndustrialPlant.Infrastructure.Services.DataService;
+
+using Newtonsoft.Json.Linq;
 
 using R3;
 
@@ -14,6 +21,7 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
     public class SaveLoadSystem : ISaveLoad
     {
         private readonly UserData userData;
+        private readonly AppJsonData appJsonData;
         private readonly IData data;
 
         [DllImport("__Internal")]
@@ -25,9 +33,10 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
         [DllImport("__Internal")]
         private static extern void rewriteProgress();
 
-        public SaveLoadSystem(UserData userData, IData data)
+        public SaveLoadSystem(UserData userData, AppJsonData appJsonData, IData data)
         {
             this.userData = userData;
+            this.appJsonData = appJsonData;
             this.data = data;
         }
 
@@ -38,11 +47,13 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
             data.OnRewrite.Subscribe(_ => Rewrite());
         }
 
-        public void Save()
+        public async void Save()
         {
             if (Application.isEditor)
             {
+                //  appJsonData.Data[DataPath.FACTORIES_DATA] = JArray.FromObject();
 
+                await appJsonData.SaveData();
             }
             else
             {
@@ -50,11 +61,21 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
             }
         }
 
-        public void Load()
+        public async void Load()
         {
             if (Application.isEditor)
             {
-                userData.GameUserData.quitTime = "1:0:0";
+                await appJsonData.LoadAllData(appJsonData.Jsons);
+
+                if (appJsonData.Data != null && appJsonData.Data.TryGetValue(DataPath.FACTORIES_DATA, out JObject factoryData))
+                {
+                    JArray factoryArray = factoryData[DataPath.FACTORIES_DATA_KEY] as JArray;
+                    userData.GameUserData.factoryStats = factoryArray.ToObject<List<FactoryStats>>();
+                }
+                else
+                {
+                    Debug.LogError("Не удалось найти данные о фабриках");
+                }
             }
             else
             {
@@ -62,11 +83,11 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
             }
         }
 
-        public void Rewrite()
+        public async void Rewrite()
         {
             if (Application.isEditor)
             {
-
+                await appJsonData.RewriteData();
             }
             else
             {

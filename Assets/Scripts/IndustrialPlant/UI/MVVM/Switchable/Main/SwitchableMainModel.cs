@@ -1,4 +1,8 @@
-using System.Numerics;
+using System.Linq;
+
+using IndustrialPlant.Data.UserData;
+
+using ObservableCollections;
 
 using R3;
 
@@ -6,60 +10,41 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 {
     public class SwitchableMainModel
     {
-        private ReactiveProperty<BigInteger> currentCoins;
-        private ReactiveProperty<BigInteger> currentCubes;
-        private ReactiveProperty<BigInteger> cubesPerSecond;
-        private ReactiveProperty<BigInteger> currentDiamonds;
-        private ReactiveProperty<BigInteger> currentSpecialCoins;
+        private readonly UserData userData;
 
-        public ReactiveProperty<BigInteger> CurrentCoins
+        private ObservableDictionary<int, int> factoriesLevel;
+        private ReactiveProperty<int> currentFactoryId;
+
+        // private readonly Subject<int> onCurrentFactoryId = new();
+        // public Observable<int> OnCurrentFactoryId => onCurrentFactoryId;
+
+        public ObservableDictionary<int, int> FactoriesLevel
         {
             get
             {
-                currentCoins ??= new(10);
-                return currentCoins;
+                factoriesLevel ??= new(
+                    userData.GameUserData.factoryStats.ToDictionary(
+                        factory => factory.id,
+                        factory => factory.currentLevel
+                    )
+                );
+                return factoriesLevel;
             }
         }
 
-        public ReactiveProperty<BigInteger> CurrentCubes
+        public ReactiveProperty<int> CurrentFactoryId
         {
             get
             {
-                currentCubes ??= new(10);
-                return currentCubes;
+                currentFactoryId ??= new();
+                // onCurrentFactoryId.OnNext(currentFactoryId.Value);
+                return currentFactoryId;
             }
         }
 
-        public ReactiveProperty<BigInteger> CubesPerSecond
+        public SwitchableMainModel(UserData userData)
         {
-            get
-            {
-                cubesPerSecond ??= new(10);
-                return cubesPerSecond;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CurrentDiamonds
-        {
-            get
-            {
-                currentDiamonds ??= new(10);
-                return currentDiamonds;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CurrentSpecialCoins
-        {
-            get
-            {
-                currentSpecialCoins ??= new(10);
-                return currentSpecialCoins;
-            }
-        }
-
-        public SwitchableMainModel()
-        {
-
+            this.userData = userData;
         }
     }
 }
