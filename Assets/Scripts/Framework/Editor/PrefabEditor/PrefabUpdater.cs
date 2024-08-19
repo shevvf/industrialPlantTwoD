@@ -1,5 +1,5 @@
+using IndustrialPlant.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
-using IndustrialPlant.UI.MVVM.Switchable.Main;
 
 using TMPro;
 
@@ -38,7 +38,7 @@ namespace Framework.Editor.PrefabEditor
 
                 while (scope.View.IndustrialFactories.Count < scope.View.IndustrialFactories.Capacity)
                 {
-                    scope.View.IndustrialFactories.Add(new SwitchableMainView.IndustrialFactoryUI());
+                    scope.View.IndustrialFactories.Add(new IndustrialFactoryView());
                 }
 
                 var prefabRoot = scope.gameObject;

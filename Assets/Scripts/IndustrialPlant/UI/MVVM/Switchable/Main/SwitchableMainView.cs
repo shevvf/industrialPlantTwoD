@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
+using IndustrialPlant.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.Extensions;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
 
@@ -12,7 +13,6 @@ using R3;
 using TMPro;
 
 using UnityEngine;
-using UnityEngine.UI;
 
 using VContainer.Unity;
 
@@ -23,14 +23,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
         [Serializable]
         public class View
         {
-            [field: SerializeField] public List<IndustrialFactoryUI> IndustrialFactories { get; set; }
-        }
-
-        [Serializable]
-        public class IndustrialFactoryUI
-        {
-            [field: SerializeField] public Button FactoryButton { get; set; }
-            [field: SerializeField] public TMP_Text FactoryLevelText { get; set; }
+            [field: SerializeField] public List<IndustrialFactoryView> IndustrialFactories { get; set; }
         }
 
         private readonly SwitchableMainViewModel switchableMainViewModel;

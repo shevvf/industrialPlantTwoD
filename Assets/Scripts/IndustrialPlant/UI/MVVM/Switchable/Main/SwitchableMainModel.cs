@@ -1,6 +1,7 @@
 using System.Linq;
 
 using IndustrialPlant.Data.UserData;
+using IndustrialPlant.IndustrialFactory;
 
 using ObservableCollections;
 
@@ -11,6 +12,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
     public class SwitchableMainModel
     {
         private readonly UserData userData;
+        private readonly IndustrialFactoryModel industrialFactoryModel;
 
         private ObservableDictionary<int, int> factoriesLevel;
         private ReactiveProperty<int> currentFactoryId;
@@ -38,9 +40,10 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
             }
         }
 
-        public SwitchableMainModel(UserData userData)
+        public SwitchableMainModel(UserData userData, IndustrialFactoryModel industrialFactoryModel)
         {
             this.userData = userData;
+            this.industrialFactoryModel = industrialFactoryModel;
         }
     }
 }
