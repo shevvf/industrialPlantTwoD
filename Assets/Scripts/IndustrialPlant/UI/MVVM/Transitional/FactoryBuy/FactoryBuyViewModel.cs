@@ -39,10 +39,16 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         private void StartBuildingTimer()
         {
             Observable
-                .Interval(TimeSpan.FromSeconds(CurrentFactoryRequiredTimeSec.Value), UnityTimeProvider.UpdateIgnoreTimeScale)
+                .Interval(TimeSpan.FromSeconds(1), UnityTimeProvider.UpdateIgnoreTimeScale)
                 .Subscribe(_ =>
                 {
-                    FinishBuilding();
+                    OnSecondGone();
+
+                    if (CurrentFactoryRequiredTimeSec.Value <= 0)
+                    {
+                        FinishBuilding();
+                        disposable.Clear();
+                    }
                 })
                 .AddTo(disposable);
         }
