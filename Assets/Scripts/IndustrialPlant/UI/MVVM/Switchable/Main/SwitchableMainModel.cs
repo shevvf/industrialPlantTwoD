@@ -40,10 +40,10 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
             }
         }
 
-        public SwitchableMainModel(UserData userData, IndustrialFactoryModel industrialFactoryModel)
+        public SwitchableMainModel(UserData userData)
         {
             this.userData = userData;
-            this.industrialFactoryModel = industrialFactoryModel;
+            // this.industrialFactoryModel = industrialFactoryModel;
         }
     }
 }
