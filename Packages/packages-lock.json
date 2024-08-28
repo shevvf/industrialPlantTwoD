@@ -7,21 +7,21 @@
       "dependencies": {
         "com.unity.modules.imgui": "1.0.0"
       },
-      "hash": "57abddc13f30ba7b9fd8502f975b8bcb34fe3ab2"
+      "hash": "2eaf201aabbbcb8d84c447cdd29201e457a4472a"
     },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cdf88c6a6ac8c9b7e6e5d3c0a360a4af29641c24"
+      "hash": "9057452c86079e4265228480b1439442894d5078"
     },
     "com.github-glitchenzo.nugetforunity": {
       "version": "https://github.com/GlitchEnzo/NuGetForUnity.git?path=/src/NuGetForUnity",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "a0bb5566082ff88e5e6ebfb850dafe7fc63b0895"
+      "hash": "a011c51ed65c9abc3151a7a408bc70d408352933"
     },
     "com.oss.leantween": {
       "version": "2.50.4",
@@ -197,7 +197,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "e743c1059bdc3faf797b04a91ec36dc829bedeb8"
+      "hash": "afaeff82040994f7836afa9f5116eb52a4e54f69"
     },
     "nuget-packages": {
       "version": "file:nuget-packages",

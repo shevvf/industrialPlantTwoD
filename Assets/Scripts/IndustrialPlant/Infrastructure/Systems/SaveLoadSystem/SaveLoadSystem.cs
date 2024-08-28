@@ -1,19 +1,15 @@
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
-
 using AnimalSimulation.Data.Json;
 using AnimalSimulation.Data.Path;
-
 using IndustrialPlant.Data.StaticData;
 using IndustrialPlant.Data.UserData;
 using IndustrialPlant.Infrastructure.Services.DataService;
-
+using IndustrialPlant.UI.Items.Currency;
+using IndustrialPlant.UI.Items.Task;
 using Newtonsoft.Json.Linq;
-
 using R3;
-
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
-
 using VContainer.Unity;
 
 namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
@@ -51,7 +47,12 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
         {
             if (Application.isEditor)
             {
-                //  appJsonData.Data[DataPath.FACTORIES_DATA] = JArray.FromObject();
+                appJsonData.Data[DataPath.FACTORIES_DATA] = new JObject
+                {
+                    [DataPath.FACTORIES_DATA_KEY] = JArray.FromObject(userData.GameUserData.factoryStats)
+                };
+
+                appJsonData.Data[DataPath.USER_DATA] = JObject.FromObject(userData.GameUserData.currencyStats);
 
                 await appJsonData.SaveData();
             }
@@ -67,15 +68,9 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
             {
                 await appJsonData.LoadAllData(appJsonData.Jsons);
 
-                if (appJsonData.Data != null && appJsonData.Data.TryGetValue(DataPath.FACTORIES_DATA, out JObject factoryData))
-                {
-                    JArray factoryArray = factoryData[DataPath.FACTORIES_DATA_KEY] as JArray;
-                    userData.GameUserData.factoryStats = factoryArray.ToObject<List<FactoryStats>>();
-                }
-                else
-                {
-                    Debug.LogError("Не удалось найти данные о фабриках");
-                }
+                userData.GameUserData.factoryStats = appJsonData.FactoriesData.ToObject<List<FactoryStats>>();
+                userData.GameUserData.taskStats = appJsonData.TasksData.ToObject<List<TaskStats>>();
+                userData.GameUserData.currencyStats = appJsonData.CurrencyData.ToObject<CurrencyStats>();
             }
             else
             {

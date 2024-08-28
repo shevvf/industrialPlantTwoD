@@ -1,7 +1,7 @@
 using System.Linq;
 
 using IndustrialPlant.Data.UserData;
-using IndustrialPlant.IndustrialFactory;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 
 using ObservableCollections;
 
@@ -11,39 +11,29 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 {
     public class SwitchableMainModel
     {
-        private readonly UserData userData;
-        private readonly IndustrialFactoryModel industrialFactoryModel;
+        private readonly IndustrialPlantModel industrialPlantModel;
 
         private ObservableDictionary<int, int> factoriesLevel;
-        private ReactiveProperty<int> currentFactoryId;
+        private ReactiveProperty<int> clickedFactoryId;
 
         public ObservableDictionary<int, int> FactoriesLevel
         {
-            get
-            {
-                factoriesLevel ??= new(
-                    userData.GameUserData.factoryStats.ToDictionary(
-                        factory => factory.id,
-                        factory => factory.currentLevel
-                    )
-                );
-                return factoriesLevel;
-            }
+            get => factoriesLevel ??= new(
+                   industrialPlantModel.IndustrialFactoryModels.ToDictionary(
+                     factory => factory.FactoryId.Value,
+                     factory => factory.FactoryLevel.Value
+                   )
+            );
         }
 
-        public ReactiveProperty<int> CurrentFactoryId
+        public ReactiveProperty<int> ClickedFactoryId
         {
-            get
-            {
-                currentFactoryId ??= new();
-                return currentFactoryId;
-            }
+            get => clickedFactoryId ??= new();
         }
 
-        public SwitchableMainModel(UserData userData)
+        public SwitchableMainModel(IndustrialPlantModel industrialPlantModel)
         {
-            this.userData = userData;
-            // this.industrialFactoryModel = industrialFactoryModel;
+             this.industrialPlantModel = industrialPlantModel;
         }
     }
 }

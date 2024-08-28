@@ -3,6 +3,7 @@ using AnimalSimulation.Data.Json;
 using IndustrialPlant.App.StateMachine;
 using IndustrialPlant.Data.StaticData.Configs;
 using IndustrialPlant.Data.UserData;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.Infrastructure.AssetManagement.AssetsProvider;
 using IndustrialPlant.Infrastructure.Factories.AddressableFactory;
 using IndustrialPlant.Infrastructure.Factories.BaseFactory;
@@ -15,6 +16,7 @@ using UnityEngine;
 
 using VContainer;
 using VContainer.Unity;
+using IndustrialPlant.UI.Items.Currency;
 
 namespace IndustrialPlant.LifetimeScopes
 {
@@ -40,6 +42,7 @@ namespace IndustrialPlant.LifetimeScopes
             RegisterWebRequestService();
             RegisterAssetProvider();
             RegisterGlobalFactories();
+            RegisterModels();
             RegisterInstance();
         }
         private void RegisterSaveLoadSystem()
@@ -76,6 +79,12 @@ namespace IndustrialPlant.LifetimeScopes
         {
             containerBuilder.Register<Factory>(Lifetime.Singleton).AsImplementedInterfaces();
             containerBuilder.Register<AddressableFactory>(Lifetime.Singleton).AsImplementedInterfaces();
+        }
+
+        private void RegisterModels()
+        {
+            containerBuilder.Register<CurrencyModel>(Lifetime.Singleton).AsSelf();
+            containerBuilder.Register<IndustrialPlantModel>(Lifetime.Singleton).AsSelf();
         }
 
         private void RegisterInstance()

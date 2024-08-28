@@ -32,7 +32,6 @@ namespace IndustrialPlant.LifetimeScopes
             RegisterCalculatorService();
             RegisterApplicationFocusService();
             RegisterTimeService();
-            RegisterJointService();
             RegisterInstance();
         }
 
@@ -49,10 +48,6 @@ namespace IndustrialPlant.LifetimeScopes
         private void RegisterTimeService()
         {
             containerBuilder.Register<TimeService>(Lifetime.Singleton).AsImplementedInterfaces();
-        }
-
-        private void RegisterJointService()
-        {
         }
 
         private void RegisterCalculatorService()

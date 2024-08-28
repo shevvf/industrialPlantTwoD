@@ -14,11 +14,10 @@ namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
         private readonly SwitchableController switchableController;
         private readonly MainHUDModel mainHUDModel;
 
-        public ReactiveProperty<BigInteger> CurrentCoins => mainHUDModel.CurrentCoins;
-        public ReactiveProperty<BigInteger> CurrentCubes => mainHUDModel.CurrentCubes;
-        public ReactiveProperty<BigInteger> CubesPerSecond => mainHUDModel.CubesPerSecond;
-        public ReactiveProperty<BigInteger> CurrentDiamonds => mainHUDModel.CurrentDiamonds;
-        public ReactiveProperty<BigInteger> CurrentSpecialCoins => mainHUDModel.CurrentSpecialCoins;
+        public ReactiveProperty<BigInteger> CurrentCoins => mainHUDModel.currencyModel.Coins;
+        public ReactiveProperty<BigInteger> CurrentCubes => mainHUDModel.currencyModel.Cubes;
+        public ReactiveProperty<BigInteger> CubesPerSecond => mainHUDModel.currencyModel.CubesPerSecond;
+        public ReactiveProperty<BigInteger> CurrentSpecialCoins => mainHUDModel.currencyModel.SpecialCoins;
 
         public MainHUDViewModel(SwitchableController switchableController, MainHUDModel mainHUDModel)
         {
@@ -64,7 +63,7 @@ namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
 
         private void OnSecondGone()
         {
-            mainHUDModel.CurrentCubes.Value += mainHUDModel.CubesPerSecond.Value;
+            CurrentCubes.Value += CubesPerSecond.Value;
         }
 
         public void Dispose()
