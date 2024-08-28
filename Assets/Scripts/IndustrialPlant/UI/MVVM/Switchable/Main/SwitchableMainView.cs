@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-using IndustrialPlant.IndustrialFactory;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.Extensions;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
 
@@ -71,16 +71,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
         private void UpdateFactoryText(int factoryIndex, int factoryLevel)
         {
             TMP_Text factoryText = Scope.View.IndustrialFactories[factoryIndex].FactoryLevelText;
-
-            if (factoryLevel <= 0)
-            {
-                factoryText.gameObject.SetActive(false);
-            }
-            else
-            {
-                factoryText.text = factoryLevel.ToString();
-                factoryText.gameObject.SetActive(true);
-            }
+            factoryText.text = factoryLevel > 0 ? factoryLevel.ToString() : string.Empty;
         }
     }
 }

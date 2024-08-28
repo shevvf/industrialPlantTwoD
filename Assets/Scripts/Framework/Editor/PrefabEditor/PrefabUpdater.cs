@@ -1,4 +1,4 @@
-using IndustrialPlant.IndustrialFactory;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
 
 using TMPro;

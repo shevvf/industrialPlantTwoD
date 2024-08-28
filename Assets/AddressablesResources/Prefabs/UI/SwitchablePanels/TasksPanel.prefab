@@ -239,7 +239,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8020974248626771262}
+      addedObject: {fileID: 8397562662001099301}
   m_SourcePrefab: {fileID: 100100000, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
 --- !u!224 &114505174042453326 stripped
 RectTransform:
@@ -251,7 +251,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
   m_PrefabInstance: {fileID: 6417402882613140616}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8020974248626771262
+--- !u!114 &8397562662001099301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,3 +267,7 @@ MonoBehaviour:
     TypeName: IndustrialPlant.LifetimeScopes.MVVM.UI.Main.MainCanvasScope
   autoRun: 1
   autoInjectGameObjects: []
+  <View>k__BackingField:
+    <Task>k__BackingField:
+    - <TaskDescription>k__BackingField: {fileID: 0}
+      <FactoryImage>k__BackingField: {fileID: 0}

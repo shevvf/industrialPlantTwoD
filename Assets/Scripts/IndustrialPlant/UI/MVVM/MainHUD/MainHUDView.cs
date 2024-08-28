@@ -62,7 +62,6 @@ namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
             mainHUDViewModel.CurrentCoins.SubscribeToTMPText(Scope.View.CoinsText).AddTo(Scope);
             mainHUDViewModel.CurrentCubes.SubscribeToTMPText(Scope.View.CubesText).AddTo(Scope);
             mainHUDViewModel.CubesPerSecond.SubscribeToTMPText(Scope.View.CubesPerSecondText).AddTo(Scope);
-            mainHUDViewModel.CurrentDiamonds.SubscribeToTMPText(Scope.View.DiamondsText).AddTo(Scope);
             mainHUDViewModel.CurrentSpecialCoins.SubscribeToTMPText(Scope.View.SpecialCoinsText).AddTo(Scope);
         }
     }

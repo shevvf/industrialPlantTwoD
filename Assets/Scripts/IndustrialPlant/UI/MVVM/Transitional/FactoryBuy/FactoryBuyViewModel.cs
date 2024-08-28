@@ -1,37 +1,51 @@
 using System;
-
+using IndustrialPlant.UI.Items.Currency;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.UI.MVVM.MainHUD.MainHUD;
 
 using R3;
+using UnityEngine;
+using VContainer.Unity;
 
 namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
 {
     public class FactoryBuyViewModel : IDisposable
     {
-        private readonly MainHUDModel mainHUDModel;
+        private readonly CurrencyModel currencyModel;
         private readonly FactoryBuyModel factoryBuyModel;
 
         private readonly CompositeDisposable disposable = new();
-        // public ReactiveProperty<int> CurrentFactoryId => factoryBuyModel.CurrentFactoryId;
-        public ReactiveProperty<int> CurrentFactoryPrice => factoryBuyModel.CurrentFactoryPrice;
-        public ReactiveProperty<int> CurrentFactoryReward => factoryBuyModel.CurrentFactoryReward;
-        public ReactiveProperty<int> CurrentFactoryMiningRate => factoryBuyModel.CurrentFactoryMiningRate;
-        public ReactiveProperty<int> CurrentFactoryRequiredTimeSec => factoryBuyModel.CurrentFactoryRequiredTimeSec;
-        public ReactiveProperty<string> CurrentFactoryName => factoryBuyModel.CurrentFactoryName;
 
-        public FactoryBuyViewModel(MainHUDModel mainHUDModel, FactoryBuyModel factoryBuyModel)
+        public ReactiveProperty<int> CurrentFactoryId => factoryBuyModel.CurrentFactory.Value.FactoryId;
+        public ReactiveProperty<int> CurrentFactoryPrice => factoryBuyModel.CurrentFactory.Value.FactoryPrice;
+        public ReactiveProperty<int> CurrentFactoryReward => factoryBuyModel.CurrentFactory.Value.FactoryReward;
+        public ReactiveProperty<int> CurrentFactoryMiningRate => factoryBuyModel.CurrentFactory.Value.FactoryMiningRate;
+        public ReactiveProperty<int> CurrentFactoryRequiredTimeSec => factoryBuyModel.CurrentFactory.Value.FactoryRequiredTimeSec;
+        public ReactiveProperty<string> CurrentFactoryName => factoryBuyModel.CurrentFactory.Value.FactoryName;
+        public ReactiveProperty<IndustrialFactoryModel> CurrentFactoryModel => factoryBuyModel.CurrentFactory;
+
+        public FactoryBuyViewModel(CurrencyModel currencyModel, FactoryBuyModel factoryBuyModel)
         {
-            this.mainHUDModel = mainHUDModel;
+            this.currencyModel = currencyModel;
             this.factoryBuyModel = factoryBuyModel;
+
+            CurrentFactoryName.Subscribe(a =>
+            {
+                Debug.Log(a);
+            });
+
+            CurrentFactoryModel.Subscribe(a => {Debug.Log(a.FactoryName); Debug.Log(CurrentFactoryName.Value); });
         }
 
         public void BuyFactory()
         {
-            if (mainHUDModel.CurrentCoins.Value < CurrentFactoryPrice.Value)
+            if (currencyModel.Coins.Value < CurrentFactoryPrice.Value)
+            {
+                Debug.Log("Not Enouth Coins");
                 return;
+            }
 
-            mainHUDModel.CurrentCoins.Value -= CurrentFactoryPrice.Value;
-            mainHUDModel.CurrentDiamonds.Value += CurrentFactoryReward.Value;
+            currencyModel.Coins.Value -= CurrentFactoryPrice.Value;
 
             StartBuildingTimer();
         }
@@ -60,7 +74,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
 
         private void FinishBuilding()
         {
-            mainHUDModel.CubesPerSecond.Value += CurrentFactoryMiningRate.Value;
+            currencyModel.Cubes.Value += CurrentFactoryMiningRate.Value;
         }
 
         public void Dispose()

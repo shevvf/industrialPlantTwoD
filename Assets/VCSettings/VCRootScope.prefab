@@ -56,16 +56,11 @@ MonoBehaviour:
     <Path>k__BackingField: Json
     <Jsons>k__BackingField:
     - {fileID: 4900000, guid: a83000aac235aaf42a4ae382da93bb06, type: 3}
+    - {fileID: 4900000, guid: db8a93ed83dfd6147879c6d1aa0e52b6, type: 3}
+    - {fileID: 4900000, guid: facb17fed4e9fc14ebba0e3e1da81f45, type: 3}
   <UserData>k__BackingField:
     <GameUserData>k__BackingField:
       quitTime: 
       nextDailyReward: 
-      factoryStats:
-      - id: 0
-        name: 
-        currentLevel: 0
-        maxLevel: 0
-        basePrice: 0
-        baseMiningRate: 0
-        reward: 0
-        baseRequiredTimeSec: 0
+      taskStats: []
+      factoryStats: []

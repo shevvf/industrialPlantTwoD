@@ -1,69 +1,18 @@
 using System.Numerics;
 
 using IndustrialPlant.Data.UserData;
-
+using IndustrialPlant.UI.Items.Currency;
 using R3;
 
 namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
 {
     public class MainHUDModel
     {
-        private readonly UserData userData;
+        public CurrencyModel currencyModel;
 
-        private ReactiveProperty<BigInteger> currentCoins;
-        private ReactiveProperty<BigInteger> currentCubes;
-        private ReactiveProperty<BigInteger> cubesPerSecond;
-        private ReactiveProperty<BigInteger> currentDiamonds;
-        private ReactiveProperty<BigInteger> currentSpecialCoins;
-
-        public ReactiveProperty<BigInteger> CurrentCoins
+        public MainHUDModel(CurrencyModel currencyModel)
         {
-            get
-            {
-                currentCoins ??= new(10);
-                return currentCoins;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CurrentCubes
-        {
-            get
-            {
-                currentCubes ??= new(10);
-                return currentCubes;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CubesPerSecond
-        {
-            get
-            {
-                cubesPerSecond ??= new(10);
-                return cubesPerSecond;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CurrentDiamonds
-        {
-            get
-            {
-                currentDiamonds ??= new(10);
-                return currentDiamonds;
-            }
-        }
-
-        public ReactiveProperty<BigInteger> CurrentSpecialCoins
-        {
-            get
-            {
-                currentSpecialCoins ??= new(10);
-                return currentSpecialCoins;
-            }
-        }
-
-        public MainHUDModel(UserData userData)
-        {
-            this.userData = userData;
+            this.currencyModel = currencyModel;
         }
     }
 }

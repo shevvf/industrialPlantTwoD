@@ -1,7 +1,8 @@
+using IndustrialPlant.Data.StaticData;
+using IndustrialPlant.UI.Items.Currency;
+using IndustrialPlant.UI.Items.Task;
 using System;
 using System.Collections.Generic;
-
-using IndustrialPlant.Data.StaticData;
 
 namespace IndustrialPlant.Data.UserData
 {
@@ -10,6 +11,9 @@ namespace IndustrialPlant.Data.UserData
     {
         public string quitTime;
         public string nextDailyReward;
+
+        public CurrencyStats currencyStats;
+        public List<TaskStats> taskStats;
         public List<FactoryStats> factoryStats;
     }
 }

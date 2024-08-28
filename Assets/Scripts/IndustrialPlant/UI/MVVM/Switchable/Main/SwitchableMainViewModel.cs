@@ -1,7 +1,10 @@
+using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Transitional;
 using IndustrialPlant.UI.MVVM.Transitional;
 
 using ObservableCollections;
+using R3;
+using UnityEngine;
 
 namespace IndustrialPlant.UI.MVVM.Switchable.Main
 {
@@ -20,7 +23,7 @@ namespace IndustrialPlant.UI.MVVM.Switchable.Main
 
         public async void OnFactoryClick(int factoryId)
         {
-            switchableMainModel.CurrentFactoryId.OnNext(factoryId);
+            switchableMainModel.ClickedFactoryId.OnNext(factoryId);
 
             if (FactoriesLevel[factoryId] <= 0)
             {
