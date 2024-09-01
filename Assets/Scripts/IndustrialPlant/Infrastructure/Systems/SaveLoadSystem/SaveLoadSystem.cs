@@ -1,5 +1,5 @@
-using AnimalSimulation.Data.Json;
-using AnimalSimulation.Data.Path;
+using IndustrialPlant.Data.Json;
+using IndustrialPlant.Data.Path;
 using IndustrialPlant.Data.StaticData;
 using IndustrialPlant.Data.UserData;
 using IndustrialPlant.Infrastructure.Services.DataService;
@@ -7,6 +7,7 @@ using IndustrialPlant.UI.Items.Currency;
 using IndustrialPlant.UI.Items.Task;
 using Newtonsoft.Json.Linq;
 using R3;
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
     {
         private readonly UserData userData;
         private readonly AppJsonData appJsonData;
+        private readonly CurrencyModel currencyModel;
         private readonly IData data;
 
         [DllImport("__Internal")]
@@ -29,15 +31,17 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
         [DllImport("__Internal")]
         private static extern void rewriteProgress();
 
-        public SaveLoadSystem(UserData userData, AppJsonData appJsonData, IData data)
+        public SaveLoadSystem(UserData userData, AppJsonData appJsonData, CurrencyModel currencyModel, IData data)
         {
             this.userData = userData;
             this.appJsonData = appJsonData;
+            this.currencyModel = currencyModel;
             this.data = data;
         }
 
         void IStartable.Start()
         {
+            Observable.Interval(TimeSpan.FromSeconds(1)).Subscribe(_ => Save());
             data.OnSave.Subscribe(_ => Save());
             data.OnLoad.Subscribe(_ => Load());
             data.OnRewrite.Subscribe(_ => Rewrite());
@@ -52,7 +56,7 @@ namespace IndustrialPlant.Infrastructure.Systems.SaveLoadSystem
                     [DataPath.FACTORIES_DATA_KEY] = JArray.FromObject(userData.GameUserData.factoryStats)
                 };
 
-                appJsonData.Data[DataPath.USER_DATA] = JObject.FromObject(userData.GameUserData.currencyStats);
+                appJsonData.Data[DataPath.USER_DATA][DataPath.CURRENCY_DATA_KEY] = JObject.FromObject(currencyModel.Data);
 
                 await appJsonData.SaveData();
             }

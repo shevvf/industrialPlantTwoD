@@ -1,11 +1,11 @@
-using IndustrialPlant.Data.Savable;
 using IndustrialPlant.Data.UserData;
 using R3;
+using System;
 using System.Numerics;
 
 namespace IndustrialPlant.UI.Items.Currency
 {
-    public class CurrencyModel : ISavable
+    public class CurrencyModel
     {
         private readonly UserData userData;
 
@@ -39,9 +39,21 @@ namespace IndustrialPlant.UI.Items.Currency
             this.userData = userData;
         }
 
-        public void GetSaveData()
+        [Serializable]
+        public struct SaveData
         {
-
+            public BigInteger coins;
+            public BigInteger cubes;
+            public BigInteger cubesPerSecond;
+            public BigInteger specialCoins;
         }
+
+        public SaveData Data => new()
+        {
+            coins = Coins.Value,
+            cubes = Cubes.Value,
+            cubesPerSecond = CubesPerSecond.Value,
+            specialCoins = SpecialCoins.Value
+        };
     }
 }

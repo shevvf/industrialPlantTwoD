@@ -1,22 +1,16 @@
-using System;
-
 using Framework.Extensions;
-
 using IndustrialPlant.LifetimeScopes.Extensions;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Transitional;
-
 using R3;
-
+using System;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
-
 using VContainer.Unity;
 
 namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
 {
-    public class FactoryBuyView : VCObject<FactoryBuyScope>, IEntryPoint, ITickable
+    public class FactoryBuyView : VCObject<FactoryBuyScope>, IEntryPoint
     {
         [Serializable]
         public class View
@@ -63,7 +57,7 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             factoryBuyViewModel.CurrentFactoryMiningRate.SubscribeToTMPText(Scope.View.MiningRateText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryPrice.SubscribeToTMPText(Scope.View.PriceText).AddTo(Scope);
-            factoryBuyViewModel.CurrentFactoryReward.SubscribeToTMPText(Scope.View.RewardText).AddTo(Scope); 
+            factoryBuyViewModel.CurrentFactoryReward.SubscribeToTMPText(Scope.View.RewardText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryName.SubscribeToTMPText(Scope.View.NameText).AddTo(Scope);
             factoryBuyViewModel.CurrentFactoryRequiredTimeSec
                .Select(seconds => FormatTime(seconds))
@@ -78,13 +72,6 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             TimeSpan timeSpan = TimeSpan.FromSeconds(totalSeconds);
             return timeSpan.ToString(@"hh\:mm\:ss");
-        }
-
-        void ITickable.Tick()
-        {
-            //factoryBuyViewModel.CurrentFactoryPrice.Value += 1;
-           // Debug.Log(factoryBuyModel.CurrentFactory.GetHashCode());
-           // Debug.Log(factoryBuyModel.CurrentFactory.Value.FactoryName);
         }
     }
 }

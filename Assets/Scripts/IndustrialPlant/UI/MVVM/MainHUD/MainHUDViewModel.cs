@@ -1,9 +1,7 @@
+using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
+using R3;
 using System;
 using System.Numerics;
-
-using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
-
-using R3;
 
 namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
 {
@@ -63,7 +61,7 @@ namespace IndustrialPlant.UI.MVVM.MainHUD.MainHUD
 
         private void OnSecondGone()
         {
-            CurrentCubes.Value += CubesPerSecond.Value;
+            mainHUDModel.currencyModel.Cubes.Value += mainHUDModel.currencyModel.CubesPerSecond.Value;
         }
 
         public void Dispose()

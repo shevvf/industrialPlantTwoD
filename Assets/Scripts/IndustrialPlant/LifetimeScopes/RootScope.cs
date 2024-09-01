@@ -1,4 +1,4 @@
-using AnimalSimulation.Data.Json;
+using IndustrialPlant.Data.Json;
 
 using IndustrialPlant.App.StateMachine;
 using IndustrialPlant.Data.StaticData.Configs;

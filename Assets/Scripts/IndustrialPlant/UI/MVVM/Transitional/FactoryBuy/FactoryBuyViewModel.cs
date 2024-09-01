@@ -1,11 +1,8 @@
-using System;
 using IndustrialPlant.UI.Items.Currency;
 using IndustrialPlant.UI.Items.IndustrialFactory;
-using IndustrialPlant.UI.MVVM.MainHUD.MainHUD;
-
 using R3;
+using System;
 using UnityEngine;
-using VContainer.Unity;
 
 namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
 {
@@ -28,13 +25,6 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         {
             this.currencyModel = currencyModel;
             this.factoryBuyModel = factoryBuyModel;
-
-            CurrentFactoryName.Subscribe(a =>
-            {
-                Debug.Log(a);
-            });
-
-            CurrentFactoryModel.Subscribe(a => {Debug.Log(a.FactoryName); Debug.Log(CurrentFactoryName.Value); });
         }
 
         public void BuyFactory()
