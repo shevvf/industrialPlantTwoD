@@ -1,0 +1,54 @@
+{
+  "tasks": [
+    {
+      "id": 0,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 1,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 2,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 3,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 4,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 5,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 6,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 7,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 8,
+      "progress": 0,
+      "condition": ["Open"]
+    },
+    {
+      "id": 9,
+      "progress": 0,
+      "condition": ["Open"]
+    }
+  ]
+}
