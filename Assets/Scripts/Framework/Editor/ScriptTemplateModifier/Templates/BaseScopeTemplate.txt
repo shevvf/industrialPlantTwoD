@@ -1,0 +1,22 @@
+using VContainer;
+using VContainer.Unity;
+
+namespace #NAMESPACE#
+{
+    public class #SCRIPTNAME# : LifetimeScope
+    {   
+        private IContainerBuilder containerBuilder;
+    
+        protected override void Configure(IContainerBuilder builder)
+        {
+            containerBuilder = builder;
+
+            RegisterEntryPoint();
+        }
+    
+        private void RegisterEntryPoint()
+        {
+
+        }
+    }
+}
