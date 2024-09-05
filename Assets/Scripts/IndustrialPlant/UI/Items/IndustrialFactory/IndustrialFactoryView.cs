@@ -10,6 +10,7 @@ namespace IndustrialPlant.UI.Items.IndustrialFactory
     [Serializable]
     public class IndustrialFactoryView
     {
+        [field: SerializeField] public Image FactoryImage { get; set; }
         [field: SerializeField] public Button FactoryButton { get; set; }
         [field: SerializeField] public TMP_Text FactoryLevelText { get; set; }
     }

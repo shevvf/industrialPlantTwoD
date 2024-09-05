@@ -79,26 +79,6 @@
             "baseMiningRate": 80,
             "reward": 400,
             "baseRequiredTimeSec": 480
-          },
-          {
-            "id": 8,
-            "name": "Factory I",
-            "currentLevel": 0,
-            "maxLevel": 10,
-            "basePrice": 900,
-            "baseMiningRate": 90,
-            "reward": 450,
-            "baseRequiredTimeSec": 540
-          },
-          {
-            "id": 9,
-            "name": "Factory J",
-            "currentLevel": 0,
-            "maxLevel": 10,
-            "basePrice": 1000,
-            "baseMiningRate": 100,
-            "reward": 500,
-            "baseRequiredTimeSec": 600
           }
     ]
   }

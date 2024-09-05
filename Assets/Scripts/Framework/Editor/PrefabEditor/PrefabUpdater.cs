@@ -1,9 +1,7 @@
-using IndustrialPlant.UI.Items.IndustrialFactory;
 using IndustrialPlant.LifetimeScopes.MVVM.UI.Switchable;
+using IndustrialPlant.UI.Items.IndustrialFactory;
 
 using TMPro;
-
-using UnityEditor;
 
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,23 +23,20 @@ namespace Framework.Editor.PrefabEditor
                     Debug.LogWarning($"Неизвестный тип: {lifetimeScope.GetType()}");
                     break;
             }
-
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
         }
 
         private static void UpdateSwitchableMainScopeFields(SwitchableMainScope scope)
         {
             if (scope.View != null)
             {
-                scope.View.IndustrialFactories.Capacity = 10;
+                scope.View.IndustrialFactories.Capacity = 8;
 
                 while (scope.View.IndustrialFactories.Count < scope.View.IndustrialFactories.Capacity)
                 {
                     scope.View.IndustrialFactories.Add(new IndustrialFactoryView());
                 }
 
-                var prefabRoot = scope.gameObject;
+                GameObject prefabRoot = scope.gameObject;
                 Transform[] allTransforms = prefabRoot.GetComponentsInChildren<Transform>();
 
                 for (int i = 0; i < scope.View.IndustrialFactories.Count; i++)
@@ -50,11 +45,13 @@ namespace Framework.Editor.PrefabEditor
 
                     if (factory != null)
                     {
+                        Image image = factory.GetComponentInChildren<Image>();
                         Button button = factory.GetComponentInChildren<Button>();
                         TMP_Text text = factory.GetComponentInChildren<TMP_Text>();
 
-                        if (button != null && text != null)
+                        if (image != null && button != null && text != null)
                         {
+                            scope.View.IndustrialFactories[i].FactoryImage = image;
                             scope.View.IndustrialFactories[i].FactoryButton = button;
                             scope.View.IndustrialFactories[i].FactoryLevelText = text;
                         }
@@ -68,6 +65,8 @@ namespace Framework.Editor.PrefabEditor
                         Debug.LogWarning($"Не удалось найти объект с именем Factory{i}");
                     }
                 }
+                // string prefabPath = AssetDatabase.GetAssetPath(PrefabUtility.GetCorrespondingObjectFromSource(scope.gameObject));
+                // PrefabUtility.SaveAsPrefabAsset(prefabRoot, prefabPath);
             }
             else
             {

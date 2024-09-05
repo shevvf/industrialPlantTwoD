@@ -1,10 +1,11 @@
+using Cysharp.Threading.Tasks;
+
 using IndustrialPlant.Infrastructure.AssetManagement.AssetsPath;
 using IndustrialPlant.Infrastructure.AssetManagement.AssetsProvider;
+using IndustrialPlant.Infrastructure.GlobalServices.AudioService;
 using IndustrialPlant.Infrastructure.GlobalServices.SceneLoaderService;
 using IndustrialPlant.Infrastructure.Services.DataService;
 using IndustrialPlant.Infrastructure.StateMachine;
-
-using Cysharp.Threading.Tasks;
 
 namespace IndustrialPlant.App.StateMachine
 {
@@ -13,17 +14,20 @@ namespace IndustrialPlant.App.StateMachine
         private readonly IData data;
         private readonly IAssetProvider assetProvider;
         private readonly ISceneLoader sceneLoader;
+        private readonly IAudio audio;
 
-        public AppInitState(IData data, IAssetProvider assetProvider, ISceneLoader sceneLoader)
+        public AppInitState(IData data, IAssetProvider assetProvider, ISceneLoader sceneLoader, IAudio audio)
         {
             this.data = data;
             this.assetProvider = assetProvider;
             this.sceneLoader = sceneLoader;
+            this.audio = audio;
         }
 
         public async void Enter()
         {
-            await InizializeAsync();
+            await InitializeAsync();
+
             await sceneLoader.LoadAsync(ScenePath.GAME_SCENE_NAME);
         }
 
@@ -32,10 +36,11 @@ namespace IndustrialPlant.App.StateMachine
 
         }
 
-        private async UniTask InizializeAsync()
+        private async UniTask InitializeAsync()
         {
             await data.LoadAsync();
             await assetProvider.InitializeAsync();
+            await audio.InitializeAsync();
         }
     }
 }

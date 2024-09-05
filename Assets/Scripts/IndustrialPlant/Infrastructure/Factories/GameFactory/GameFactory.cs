@@ -23,11 +23,17 @@ namespace IndustrialPlant.Infrastructure.Factories.GameFactory
         {
             applicationFocus.Initialize();
             CreateCanvas();
+            CreateAudio();
         }
 
         public void CreateCanvas()
         {
             //addressableFactory.CreateByName(AddressablePath.GAME_CANVAS_PATH, mainGameFolder.CanvasHolder);
+        }
+
+        public void CreateAudio()
+        {
+            // addressableFactory.CreateByName(AddressablePath.GAME_AUDIO_PATH);
         }
     }
 }

@@ -1,9 +1,9 @@
 namespace IndustrialPlant.UI.Items.Task
 {
     public enum TaskConditions
-    {       
-        Lock,
-        Open,
-        Complete
+    {
+        Lock = 0,
+        Open = 1,
+        Complete = 2
     }
 }

@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3220478885395206961}
+  m_Father: {fileID: 5193393032985698001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -230,40 +230,143 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: m_Name
+      value: TonPanel
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4928287534355548809, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - {fileID: 4153642547766588528, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6384411242228349382, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4339833124557861926, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 510200467841866512}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -6937183973442346610}
+      addedObject: {fileID: 1682158948796934124}
   m_SourcePrefab: {fileID: 100100000, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
---- !u!224 &3220478885395206961 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6384411242228349382, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
-  m_PrefabInstance: {fileID: 8370094153226742519}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7189897136742463611 stripped
+--- !u!1 &532680756864529819 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
   m_PrefabInstance: {fileID: 8370094153226742519}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-6937183973442346610
+--- !u!114 &1682158948796934124
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7189897136742463611}
+  m_GameObject: {fileID: 532680756864529819}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad0b7bee46ad40c45a93e3f82446fbbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: IndustrialPlant.LifetimeScopes.MVVM.UI.Main.MainCanvasScope
+    TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
+--- !u!224 &5193393032985698001 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4339833124557861926, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+  m_PrefabInstance: {fileID: 8370094153226742519}
+  m_PrefabAsset: {fileID: 0}

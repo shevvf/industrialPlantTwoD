@@ -1,7 +1,7 @@
+using Cysharp.Threading.Tasks;
+
 using IndustrialPlant.Infrastructure.AssetManagement.AssetsProvider;
 using IndustrialPlant.Infrastructure.Factories.BaseFactory;
-
-using Cysharp.Threading.Tasks;
 
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -19,13 +19,13 @@ namespace IndustrialPlant.Infrastructure.Factories.AddressableFactory
             this.factory = factory;
         }
 
-        public async UniTask<GameObject> CreateByReference(AssetReference assetReference, Transform parent)
+        public async UniTask<GameObject> CreateByReference(AssetReference assetReference, Transform parent = null)
         {
             GameObject gameObject = await assetProvider.Load<GameObject>(assetReference);
             return factory.CreatePrefab(gameObject, parent);
         }
 
-        public async UniTask<GameObject> CreateByName(string assetName, Transform parent)
+        public async UniTask<GameObject> CreateByName(string assetName, Transform parent = null)
         {
             GameObject gameObject = await assetProvider.Load<GameObject>(assetName);
             return factory.CreatePrefab(gameObject, parent);

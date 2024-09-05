@@ -1,11 +1,13 @@
 using System;
+
+using IndustrialPlant.Data.StaticData.Configs.Audio;
+using IndustrialPlant.Infrastructure.GlobalServices.AudioService;
 using IndustrialPlant.UI.Items.Currency;
 using IndustrialPlant.UI.Items.IndustrialFactory;
-using IndustrialPlant.UI.MVVM.MainHUD.MainHUD;
 
 using R3;
+
 using UnityEngine;
-using VContainer.Unity;
 
 namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
 {
@@ -13,6 +15,8 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
     {
         private readonly CurrencyModel currencyModel;
         private readonly FactoryBuyModel factoryBuyModel;
+        private readonly UISoundsConfig uISoundsConfig;
+        private readonly IAudio audio;
 
         private readonly CompositeDisposable disposable = new();
 
@@ -24,29 +28,26 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
         public ReactiveProperty<string> CurrentFactoryName => factoryBuyModel.CurrentFactory.Value.FactoryName;
         public ReactiveProperty<IndustrialFactoryModel> CurrentFactoryModel => factoryBuyModel.CurrentFactory;
 
-        public FactoryBuyViewModel(CurrencyModel currencyModel, FactoryBuyModel factoryBuyModel)
+        public FactoryBuyViewModel(CurrencyModel currencyModel, FactoryBuyModel factoryBuyModel,
+            UISoundsConfig uISoundsConfig, IAudio audio)
         {
             this.currencyModel = currencyModel;
             this.factoryBuyModel = factoryBuyModel;
-
-            CurrentFactoryName.Subscribe(a =>
-            {
-                Debug.Log(a);
-            });
-
-            CurrentFactoryModel.Subscribe(a => {Debug.Log(a.FactoryName); Debug.Log(CurrentFactoryName.Value); });
+            this.uISoundsConfig = uISoundsConfig;
+            this.audio = audio;
         }
 
         public void BuyFactory()
         {
             if (currencyModel.Coins.Value < CurrentFactoryPrice.Value)
             {
+                PlayFailSound();
                 Debug.Log("Not Enouth Coins");
                 return;
             }
 
             currencyModel.Coins.Value -= CurrentFactoryPrice.Value;
-
+            PlayBuySound();
             StartBuildingTimer();
         }
 
@@ -65,6 +66,21 @@ namespace IndustrialPlant.UI.MVVM.Transitional.FactoryBuy
                     }
                 })
                 .AddTo(disposable);
+        }
+
+        public void PlayCloseSound()
+        {
+            audio.PlayUISound(uISoundsConfig.Grow);
+        }
+
+        public void PlayBuySound()
+        {
+            audio.PlayUISound(uISoundsConfig.Buy);
+        }
+
+        public void PlayFailSound()
+        {
+            audio.PlayUISound(uISoundsConfig.Fail);
         }
 
         private void OnSecondGone()

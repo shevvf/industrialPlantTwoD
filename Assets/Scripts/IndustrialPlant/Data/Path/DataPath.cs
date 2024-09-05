@@ -1,4 +1,4 @@
-namespace AnimalSimulation.Data.Path
+namespace IndustrialPlant.Data.Path
 {
     public class DataPath
     {

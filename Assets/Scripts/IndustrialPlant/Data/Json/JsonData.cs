@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 using UnityEngine;
 
-namespace AnimalSimulation.Data.Json
+namespace IndustrialPlant.Data.Json
 {
     [Serializable]
     public class JsonData<T> where T : JsonData<T>

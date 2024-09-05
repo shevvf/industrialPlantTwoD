@@ -30,7 +30,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8429259386956450301}
+  m_Father: {fileID: 1178093491005408285}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -150,6 +150,102 @@ PrefabInstance:
       propertyPath: m_Name
       value: FriendsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4754208834058341087, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -230,40 +326,143 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryImage>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryButton>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[0].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[1].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[2].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[3].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[4].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[5].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[6].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170571258613645979, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: <View>k__BackingField.<IndustrialFactories>k__BackingField.Array.data[7].<FactoryLevelText>k__BackingField
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+      propertyPath: m_Name
+      value: FriendsPanel
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2180450394690698338, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 4928287534355548809, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - {fileID: 4153642547766588528, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6384411242228349382, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 4339833124557861926, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1584178105756431412}
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -2300818797089916813}
+      addedObject: {fileID: 3874868785274169954}
   m_SourcePrefab: {fileID: 100100000, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
---- !u!1 &4290923161012921015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1724642343963234956, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+--- !u!224 &1178093491005408285 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4339833124557861926, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
   m_PrefabInstance: {fileID: 3198473769495392315}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-2300818797089916813
+--- !u!1 &6858904064853454679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8308290403648397164, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
+  m_PrefabInstance: {fileID: 3198473769495392315}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3874868785274169954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4290923161012921015}
+  m_GameObject: {fileID: 6858904064853454679}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fdcefee661263a4aaa1e4ae8ba8b850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   parentReference:
-    TypeName: IndustrialPlant.LifetimeScopes.MVVM.UI.Main.MainCanvasScope
+    TypeName: 
   autoRun: 1
   autoInjectGameObjects: []
---- !u!224 &8429259386956450301 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6384411242228349382, guid: 39a9e5d89ea3c27429439f59c211faef, type: 3}
-  m_PrefabInstance: {fileID: 3198473769495392315}
-  m_PrefabAsset: {fileID: 0}

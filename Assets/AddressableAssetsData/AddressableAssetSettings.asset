@@ -46,6 +46,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 5de2ad21b78401e47a42fc95c0d0c9c5, type: 2}
   - {fileID: 11400000, guid: 9e4f79954d8b1414ab39a3659031c6a8, type: 2}
+  - {fileID: 11400000, guid: 876b0fb1a6ed2cf42a19df3728b9b2ed, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -87,11 +88,12 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - UI
-    - 3D
     - Default
     - MainHUD
-    - SwithablePanles
+    - Swithable
     - PopUp
+    - Sounds
+    - Transitional
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 9d6bd2f815e24dd4c9b6b0c0fc1ceb37, type: 2}

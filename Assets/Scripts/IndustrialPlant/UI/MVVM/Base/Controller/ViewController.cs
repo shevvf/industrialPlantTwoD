@@ -19,7 +19,8 @@ namespace IndustrialPlant.UI.MVVM.Base.Controller
 
         private readonly List<IView> instantiatedViews = new();
 
-        public ViewController(PanelsConfig panelsConfig, Transform targetParent, IViewFactory viewFactory)
+        public ViewController(PanelsConfig panelsConfig, Transform targetParent,
+            IViewFactory viewFactory)
         {
             this.panelsConfig = panelsConfig;
             this.targetParent = targetParent;

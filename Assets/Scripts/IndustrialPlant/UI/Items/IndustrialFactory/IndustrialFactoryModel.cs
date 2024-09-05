@@ -1,13 +1,11 @@
 using IndustrialPlant.Data.StaticData;
-using IndustrialPlant.Data.UserData;
-using IndustrialPlant.Infrastructure.Factories.BaseFactory;
-using IndustrialPlant.UI.MVVM.Switchable.Main;
+
 using R3;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+
+using UnityEngine;
 
 namespace IndustrialPlant.UI.Items.IndustrialFactory
-{ 
+{
     public class IndustrialFactoryModel
     {
         private readonly FactoryStats factoryStats;
@@ -20,6 +18,7 @@ namespace IndustrialPlant.UI.Items.IndustrialFactory
         private ReactiveProperty<int> factoryMiningRate;
         private ReactiveProperty<int> factoryReward;
         private ReactiveProperty<int> factoryRequiredTimeSec;
+        private ReactiveProperty<Sprite> factoryImage;
 
         public ReactiveProperty<int> FactoryId
         {
@@ -62,8 +61,8 @@ namespace IndustrialPlant.UI.Items.IndustrialFactory
         }
 
         public IndustrialFactoryModel(FactoryStats factoryStats)
-        { 
-           this.factoryStats = factoryStats;    
+        {
+            this.factoryStats = factoryStats;
         }
     }
 }

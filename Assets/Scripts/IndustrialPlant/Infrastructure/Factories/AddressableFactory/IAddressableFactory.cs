@@ -7,8 +7,8 @@ namespace IndustrialPlant.Infrastructure.Factories.AddressableFactory
 {
     public interface IAddressableFactory
     {
-        UniTask<GameObject> CreateByReference(AssetReference assetReference, Transform parent);
+        UniTask<GameObject> CreateByReference(AssetReference assetReference, Transform parent = null);
 
-        UniTask<GameObject> CreateByName(string assetName, Transform parent);
+        UniTask<GameObject> CreateByName(string assetName, Transform parent = null);
     }
 }
