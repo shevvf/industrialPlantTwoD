@@ -1,8 +1,0 @@
-{
-  "currency": {
-    "coins": 100,
-    "cubes": 50,
-    "cubesPerSecond": 10,
-    "specialCoins": 10
-  }
-}
